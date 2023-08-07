@@ -1,4 +1,3 @@
-import 'dotenv/config';
 
 import db from './models/db.js';
 import express from "express";
@@ -32,7 +31,7 @@ app.use(`/`, routes);
 
 db.connect();
 
-app.listen(port, function () {
+app.listen(process.env.PORT, function () {
     console.log(`Server is running at port: ${port}`);
 });
 
