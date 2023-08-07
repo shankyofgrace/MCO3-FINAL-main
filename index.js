@@ -1,4 +1,4 @@
-import 'dotenv/config';
+
 
 import db from './models/db.js';
 import express from "express";
@@ -7,7 +7,7 @@ import routes from './models/routes.js';
 import bodyParser from 'body-parser';
 import Handlebars from 'handlebars';
 import path from 'path';
-const port = process.env.SERVER_PORT;
+const port = process.env.PORT;
 
 import { fileURLToPath }        from 'url';
 import { dirname, join }        from 'path';
