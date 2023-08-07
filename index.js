@@ -1,4 +1,4 @@
-
+import 'dotenv/config';
 
 import db from './models/db.js';
 import express from "express";
