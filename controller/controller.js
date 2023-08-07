@@ -92,7 +92,7 @@ const controller = {
                         email: userdata.email,
                         location: userdata.location,
                         date: userdata.date,
-                        password: userdata.password,
+                        password: await bcrypt.hash(userdata.password,10),
                         });
                     console.log(newCustomer);
                     //save to db
@@ -116,7 +116,7 @@ const controller = {
                         name: userdata.name,
                         username: userdata.username,
                         email: userdata.email,
-                        password: userdata.password,
+                        password: await bcrypt.hash(userdata.password,10),
                         location: userdata.location,
                     });
 
