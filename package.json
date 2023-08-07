@@ -15,7 +15,7 @@
     "load1": "node data/userdata.js",
     "load2": "node data/estpostdata.js",
     "load3": "node data/commentsdata.js",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "name": "phase-1-updated-apdev",
   "version": "1.0.0",
