@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 
 const { ObjectId } = require('mongodb');
 
-const port = process.env.SERVER_PORT;
+
 
 const multer = require('multer');
 const storage = multer.diskStorage({
@@ -144,7 +144,7 @@ dbconn.connectToMongo((err) => {
         process.exit(1);
     }
 
-    app.listen(port, () => {
+    app.listen(process.env.PORT, () => {
         console.log('listening on port');
     });
 });
