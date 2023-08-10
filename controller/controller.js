@@ -149,7 +149,7 @@ const controller = {
             console.log(userdata);
             
             const existingCustomer = await Customer.findOne({email: userdata.email});
-            const existingOwner = await Owner.findOne({email: userdata.email});
+            const existingOwner = await Owner.findOne({email: userdata.email, password: userdata.password});
             
             
             
@@ -159,7 +159,7 @@ const controller = {
                 activeUser = existingCustomer;
                 return res.redirect(`/home`);
             }
-            else if(existingOwner && await bcrypt.compare(userdata.password, existingOwner.password)) {
+            else if(existingOwner) {
                 activeUserRole = 'owner';
                 activeUser = existingOwner;
                 isOwner = true;
